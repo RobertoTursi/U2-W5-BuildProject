@@ -21,7 +21,7 @@ nav{
     align-items: center;
     padding: 1.5rem 7rem;
 }
-nav ul{
+nav ul, aside ul{
     margin:0;
     padding:0;
     list-style-type: none;
@@ -39,7 +39,7 @@ nav li:nth-of-type(5){
 header{
     background-color: #ffc017;
 }
-.title, .container{
+.title{
     padding: 4.5rem 0 4.5rem 7rem;
     width:35rem;
 }
@@ -115,9 +115,7 @@ h1{
 .articleSpan:nth-of-type(2), .articleSpan:nth-of-type(5), .articleSpan:nth-of-type(6){
     padding-top: 0;
 }  */
-img.rectangularimg{
-    border-radius: 0;
-}
+
 .article h5{
     font-size: 16px;
 }
@@ -125,10 +123,92 @@ img.rectangularimg{
 .container{
     display:flex;
     justify-content: space-between;
+    padding: 4.5rem 7rem 4.5rem 7rem;
 }
 .cardcontainer{
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    height: 2000px;
+    justify-content: space-around;
+}
+.cardcontainer article{
+    display: flex;
+    margin-bottom: 4rem;
+    height: 12rem;
+}
+.container article>img{
+    width:40%;
+    margin-left: 30px;
+
+}
+.containerSpan{
+    display: flex;
+    align-items: center;
+}
+.containerSpan span{
+    margin-left:10px
+}
+.cardcontainer article>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.containerSpan img{
+    width:30px;
+    border-radius: 100%;
+}
+img.rectangularimg{
+    border-radius: 25%;
+}
+.cardcontainer h3{
+    font-size: 27px;
+    margin:7px 0;
+    font-weight: 900;
+}
+.cardcontainer p{
+    margin:0
 }
 aside{
-    width:40%;
+    padding-left: 110px;
+}
+aside ul{
+    flex-wrap: wrap;
+}
+aside ul li{
+    margin-right: 20px;
+    margin-bottom: 7px;
+    color: gray;
+}
+aside h6{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 900;
+    word-spacing: 2.5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+aside span, aside li, .cardcontainer article{
+    cursor: pointer;
+}
+aside>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:250px
+}
+.cardspan span{
+    border: 1px solid lightgray;
+    margin-bottom: 5px;
+    padding: 8px;
+    font-size: 14px;
+    color:gray
+}
+.cardspan{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.asidefirstcard{
+    height: 70%;
+    border-bottom: 1px solid lightgray;
 }
