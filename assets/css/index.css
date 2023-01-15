@@ -13,6 +13,9 @@ nav, h1{
 }
 nav{
     border-bottom: 1px solid rgb(37, 36, 36);
+    position: sticky;
+    top:0;
+    z-index: 1;
     
 }
 .navigation{
@@ -20,6 +23,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 7rem;
+    
 }
 nav ul, aside ul{
     margin:0;
@@ -36,7 +40,7 @@ nav li:nth-of-type(5){
     color:white;
     border-radius: 20px;
 } 
-header{
+.navigation, .start{
     background-color: #ffc017;
 }
 .title{
@@ -65,7 +69,7 @@ h1{
 }
 .rated{
     padding: 2.2rem 7rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
 }
 .trend{
     display: flex;
@@ -118,6 +122,7 @@ h1{
 
 .article h5{
     font-size: 16px;
+    margin:0
 }
 
 .container{
@@ -134,7 +139,7 @@ h1{
 .cardcontainer article{
     display: flex;
     margin-bottom: 4rem;
-    height: 12rem;
+    height: 16rem;
 }
 .container article>img{
     width:40%;
@@ -152,6 +157,7 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    line-height: 23px;
 }
 .containerSpan img{
     width:30px;
@@ -166,7 +172,8 @@ img.rectangularimg{
     font-weight: 900;
 }
 .cardcontainer p{
-    margin:0
+    margin:0;
+    color:gray;
 }
 aside{
     padding-left: 110px;
@@ -187,7 +194,7 @@ aside h6{
     margin-bottom: 10px;
     text-align: center;
 }
-aside span, aside li, .cardcontainer article{
+aside span, aside li, .cardcontainer article, .article>div, .article, nav li{
     cursor: pointer;
 }
 aside>div{
@@ -203,6 +210,20 @@ aside>div{
     font-size: 14px;
     color:gray
 }
+.starSpan>span, .article>div>span{
+    display: flex;
+    align-items: center;
+}
+.starSpan>span svg, .article>div>span svg{
+    margin-left:5px;
+}
+.starSpan{
+    color:gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    
 .cardspan{
     display: flex;
     justify-content: space-around;
@@ -211,4 +232,99 @@ aside>div{
 .asidefirstcard{
     height: 70%;
     border-bottom: 1px solid lightgray;
+}
+.boorderSpan{
+    border-radius: 30px;
+    padding:5px;
+    background-color: rgb(235, 231, 231);
+    color:gray;
+}
+
+
+@media screen and (min-width:576px) and (max-width:768px){
+    .navigation, .rated, .container{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .title{
+        padding-left: 3rem;
+    }
+    .rated{
+        height: 500px;
+    }
+    .article{
+
+        width:50%;
+        margin-bottom: 1.5rem;
+    }
+    .container{
+        flex-direction: column;
+        padding-top: 25px;
+    }
+    .cardcontainer{
+        order:1
+    }
+    aside{
+        padding-left:0;
+        height: 226px;
+    }
+    aside>div{
+        height: 220px;
+        justify-content: space-around;
+    }
+    .cardspan span{
+        margin: 0px 7px 7px 0;
+        
+    }
+    .cardspan{
+        justify-content: flex-start; 
+    }
+    aside h6{
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    .navigation svg{
+        width: 7rem;
+    }
+    .navigation li{
+        font-size:12px;
+        padding: 10px 8px
+    }
+    .asidefirstcard{
+        height:168px
+    }
+    aside ul li{
+        margin-right: 6px;
+    }
+}
+@media screen and (min-width:769px) and (max-width:1163px){  /*866px*/
+    .navigation svg{
+        width:7rem
+    }
+    .navigation li{
+        padding: 10px 7px
+    }
+    .card{
+        height: 27rem;
+        justify-content: space-between;
+    }
+    .article{
+        width:32%
+    }
+    .cardcontainer{
+        height: 2500px;
+    }
+    aside{
+        padding-left: 12px;
+    }
+    .cardspan span{
+        padding: 5px;
+        font-size: 11px;
+    }
+    .asidefirstcard{
+        height: 213px;
+    }
+    aside ul{
+        margin-top: 10px;
+    }
 }
