@@ -4,11 +4,17 @@ let button = document.getElementById("button")
 
 window.onscroll = () => {
     if(window.scrollY > headerHeight) {
-        nav.classList.add("whiteNav")
-        button.classList.add("grennLi")
+        nav.style.backgroundColor = "white"
+        nav.style.transition = "1s"
+        button.style.backgroundColor = "green"
+        button.style.transition = "1s"
+
     } else {
-        nav.classList.remove("whiteNav")
-        button.classList.remove("greenLi")
+        nav.style.backgroundColor = "#ffc017"
+        nav.style.transition = "1s"
+        button.style.backgroundColor = "black"
+        button.style.transition = "1s"
+        
     }
 }
 
